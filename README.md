@@ -4,7 +4,7 @@ GIT commands
 ##### Reset all changes to remote master  
     git fetch --all
     git reset --hard origin/master
-
+    
 ##### Stage changed files
     git add . (stages new and modified, without deleted)
     git add -u (stages modified and deleted, without new)
