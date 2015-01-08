@@ -1,7 +1,7 @@
 GIT commands
 ==========
 
-##### Reset all changes to remote master
+##### Reset all changes to remote master  
     git fetch --all
     git reset --hard origin/master
 
