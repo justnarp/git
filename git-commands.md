@@ -27,3 +27,9 @@ GIT commands
 ##### Update branch names from remote
     git fetch origin
     git branch -v -a
+    
+##### Ignore changes in tracked files
+    git update-index --assume-unchanged <file>
+    
+##### Un-ignore changes in tracked files    
+    git update-index --no-assume-unchanged <file>
