@@ -38,6 +38,35 @@ git reset --hard e3f1e37
 git push --force origin master
 ```
 
+#### Move your crazy experiment into a seperate branch
+Let's assume you've been committing code for a crazy experiment to the master branch for a while, then realize this should have been in its own branch:
+![Crazy](crazy.gif)
+
+```
+# To make this example easier to understand, 
+# we will make sure we're on the master branch,
+# with the shortened hash for where we want to
+# return to eventually, after our crazy experiment.
+git checkout master
+git log --pretty=format:'%h' -n 1 # => shortened hash is e.g. 8b3bff2
+
+# Now we begin a crazy experiment on the master branch
+touch test.md # Create an empty file
+echo 1 >> test.md # Change the file
+git add -A
+git commit -m '1'
+git push
+git log --pretty=format:'%h' -n 1 # => shortened hash is e.g. 8b3bff2
+
+# Things are looking good, so naïve as we are, we continue
+echo 2 >> test.md # Change the file
+git add -A
+git commit -m '2'
+git push
+
+# We realize the experiment 
+```
+
 #### Reset file
 Overwrite content in file with content from same file located on origin/master:
 
