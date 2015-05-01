@@ -1,5 +1,7 @@
 # GIT commands
 
+* [Move your crazy experiment into a seperate branch](#move-your-crazy-experiment-into-a-seperate-branch)
+
 #### Revert local changes
 To reset all local changes, get the same content as remote master:
 
