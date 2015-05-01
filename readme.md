@@ -40,31 +40,26 @@ git push --force origin master
 
 #### Move your crazy experiment into a seperate branch
 Let's assume you've been committing code for a crazy experiment to the master branch for a while, then realize this should have been in its own branch:
-![Crazy](crazy.gif)
+![Crazy experiment on master](crazy-experiment-1.gif)
 
+Create a seperate branch containing this experimental code:
 ```
-# To make this example easier to understand, 
-# we will make sure we're on the master branch,
-# with the shortened hash for where we want to
-# return to eventually, after our crazy experiment.
-git checkout master
-git log --pretty=format:'%h' -n 1 # => shortened hash is e.g. 8b3bff2
+git branch crazy-experiment
+git push origin crazy-experiment
+```
+![Crazy experiment on its own branch](crazy-experiment-2-2.gif)
 
-# Now we begin a crazy experiment on the master branch
-touch test.md # Create an empty file
-echo 1 >> test.md # Change the file
-git add -A
-git commit -m '1'
-git push
-git log --pretty=format:'%h' -n 1 # => shortened hash is e.g. 8b3bff2
+Reset master branch:
+```
+git reset --hard 8fa7b51
+git push --force origin master
+```
+![The master branch is back to normal](crazy-experiment-3.gif)
+![Crazy experiment branch 3 commits ahead of master](crazy-experiment-4.gif)
 
-# Things are looking good, so naïve as we are, we continue
-echo 2 >> test.md # Change the file
-git add -A
-git commit -m '2'
-git push
-
-# We realize the experiment 
+Now continue working on your experimental branch:
+```
+git checkout crazy-experiment
 ```
 
 #### Reset file
