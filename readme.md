@@ -55,6 +55,8 @@ git reset --hard 8fa7b51
 git push --force origin master
 ```
 ![The master branch is back to normal](crazy-experiment-3.gif)
+
+You can verify your experiment branch is 3 commits ahead of master:
 ![Crazy experiment branch 3 commits ahead of master](crazy-experiment-4.gif)
 
 Now continue working on your experimental branch:
