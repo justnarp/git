@@ -1,6 +1,16 @@
 # GIT commands
 
+* [Revert local changes](#revert-local-changes)
+* [Staging files](#staging-files)
+* [Git config](#git-config)
+* [Rollback](#rollback)
 * [Move your crazy experiment into a seperate branch](#move-your-crazy-experiment-into-a-seperate-branch)
+* [Reset file](#reset-file)
+* [Branch names](#branch-names)
+* [Ignore changes](#ignore-changes)
+* [Un-ignore changes](#un-ignore-changes)
+* [Misc](#misc)
+* [GitHub](#github)
 
 #### Revert local changes
 To reset all local changes, get the same content as remote master:
