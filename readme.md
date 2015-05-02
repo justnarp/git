@@ -112,7 +112,7 @@ git config core.safecrlf false
 ```
 
 ## GitHub
-Create a new repository on GitHub from the command line (if you're on Windows you'll need to install `curl` first):
+Create a new repository on GitHub from the command line (if you're on Windows you'll need to install [`curl`](https://www.google.com/search?q=windows+curl) first):
 ```bash
 curl -u USER https://api.github.com/user/repos -d '{ "name": "REPO" }' # Replace USER and REPO
 ```
