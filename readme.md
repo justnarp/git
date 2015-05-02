@@ -112,17 +112,17 @@ git config core.safecrlf false
 ```
 
 #### GitHub
-Create a new repository on the command line:
+Create a new repository on GitHub from the command line (if you're on Windows you'll need to install `curl` first):
+```
+curl -u USER https://api.github.com/user/repos -d '{ "name": "REPO" }' # Replace USER and REPO
+```
+
+Create a new project and push it to an existing repository on GitHub:
 ```bash
-echo "# courses" >> README.md
+echo "# REPO" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/mikelothar/[repo].git
-git push -u origin master
-```
-…or push an existing repository from the command line:
-```bash
-git remote add origin https://github.com/mikelothar/[repo].git
+git remote add origin https://github.com/USER/REPO.git # Replace USER and REPO
 git push -u origin master
 ```
